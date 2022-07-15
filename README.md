@@ -9,3 +9,5 @@ Eternity - Implementation as part of SOEN 6011 course at Concordia University.
  ## Trancedental Function - (F5)
  
  ab^x 
+
+A trancedental function is a function which is not an algebraic function. In other words, a function which "transcends," i.e., cannot be expressed in terms of, algebra. Examples of transcendental functions include the exponential function, the trigonometric functions, and the inverse functions of both.
