@@ -5,6 +5,7 @@ Eternity - Implementation as part of SOEN 6011 course at Concordia University.
 ## Student Details
  - Name - <a href="https://www.linkedin.com/in/dhananjay-narayan-aa222615b/"> Dhananjay Narayan </a>
  - Student ID - 40164521
+ - Email ID - dhananjayashwath@gmail.com
  
  ## Trancedental Function - (F5)
  
