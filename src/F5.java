@@ -1,12 +1,28 @@
 import java.util.*;
 
+
+/**
+ * The main class f5 having main function to start the execution. Contains functions for calculations. 
+ * @author Dhananjay Narayan
+ *
+ */
 class f5{
 
+	/**
+	 * A function to calculate power when two inputs are given. 
+	 * @param a the base of the number
+	 * @param b the power to which the base will be raised
+	 * @return res the result of the power calculation.
+	 */
 	public static int powerCalc(int a,int b) {
 		int res = a^b;
 		return res;
 	}
 	
+	/**
+	 * The main function for the application
+	 * @param args
+	 */
     public static void main(String args[]){
     	System.out.println("In Eclipse Now: ");
         System.out.println("F5: ab^x");
