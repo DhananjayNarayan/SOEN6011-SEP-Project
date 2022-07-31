@@ -15,8 +15,15 @@ class f5{
 	 * @return res the result of the power calculation.
 	 */
 	public static int powerCalc(int a,int b) {
+		
+		
+		if (b == 0) {
+			return 1;
+		}
+		else {
 		int res = a^b;
 		return res;
+		}
 	}
 	
 	/**
