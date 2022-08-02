@@ -14,7 +14,7 @@ class f5{
 	 * @param b the power to which the base will be raised
 	 * @return res the result of the power calculation.
 	 */
-	public static int powerCalc(int a,int b) {
+	public static int powerCalc(int a,int b) throws Exception{
 		
 		
 		if (b == 0) {
@@ -41,7 +41,14 @@ class f5{
         int b = sc.nextInt();
         int x =  sc.nextInt();
         
-        int bx = powerCalc(b,x);
+        int bx = 0;
+		try {
+			bx = powerCalc(b,x);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Incorrect Input");
+			e.printStackTrace();
+		}
         int answer = a*bx;
         
         System.out.println("Result is : "+answer );
