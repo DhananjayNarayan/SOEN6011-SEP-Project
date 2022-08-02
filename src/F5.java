@@ -14,14 +14,14 @@ class f5{
 	 * @param b the power to which the base will be raised
 	 * @return res the result of the power calculation.
 	 */
-	public static int powerCalc(int a,int b) throws Exception{
+	public static double powerCalc(double a,int b) throws Exception{
 		
 		
 		if (b == 0) {
 			return 1;
 		}
 		else {
-		int res = a^b;
+		double res = a^b;
 		return res;
 		}
 	}
@@ -37,11 +37,11 @@ class f5{
         
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the values of a,b and x");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int x =  sc.nextInt();
+        double a = sc.nextInt();
+        double b = sc.nextInt();
+        double x =  sc.nextInt();
         
-        int bx = 0;
+        double bx = 0;
 		try {
 			bx = powerCalc(b,x);
 		} catch (Exception e) {
@@ -49,7 +49,7 @@ class f5{
 			System.out.println("Incorrect Input");
 			e.printStackTrace();
 		}
-        int answer = a*bx;
+        double answer = a*bx;
         
         System.out.println("Result is : "+answer );
         
