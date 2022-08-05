@@ -64,12 +64,12 @@ public class f5ExponentialFunctionTest {
 	}
 
 	/**
-	 * A test case to verify the non-Functional Requirement ID NFR5
+	 * A test case to verify the non-Functional Requirement ID NFR4
 	 * 
 	 * @throws Exception
 	 */
 	@Test
-	public void testRequirementNFR5() throws Exception {
+	public void testRequirementNFR4() throws Exception {
 		double solutionWithRecursion = f5ExponentialFunction.recursiveExponentiation(1, 2, 3);
 		assertTrue(solutionWithRecursion == 8.0);
 	}
