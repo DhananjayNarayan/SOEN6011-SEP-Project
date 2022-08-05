@@ -9,83 +9,60 @@ import java.util.*;
  */
 class f5{
 
-	/**
-	 * A function to calculate power when two inputs are given. 
-	 * @param a the base of the number
-	 * @param b the power to which the base will be raised
-	 * @return res the result of the power calculation.
-	 */
-	public static double calculateExponentialResult(double a,double b,int x) throws Exception{
-
-        double bx =0;
-		if (x == 0) {
-			return 1.0;
-		}
-		else {
-			try {
-			 bx = calculateExponentIterative(b,x);
-			}
-			catch(Exception StackOverflowError){
-				System.out.println("The result is very big leading to stack overflow.");
-			}
-		}
-		
-		double result = a*bx;
-		return result;
-	}
-
-	private static double calculateExponentRecursive(double b, int x) {
-		// TODO Auto-generated method stub
-		double result = 0;
-		if(x==0) {
-			return 1;
-		}
-		else {
-			try {
-			result= b*calculateExponentRecursive(b,x-1);
-			}
-			catch(Exception StackOverflowError){
-				System.out.println("The result is very big leading to stack overflow.");
-			}
-			}
-		return result;
-		
-	}
-	
-	private static double calculateExponentIterative(double b,int x) {
-		double result = 1;
-		
-		for(int i = 1; i <= x; i++)
-		{
-			result = result * b;
-		}
-		
-		return result;
-	}
 
 	/**
 	 * The main function for the application
 	 * @param args
+	 * @throws Exception 
 	 */
-	public static void main(String args[]){
+	public static void main(String args[]) throws Exception{
+
+
+		System.out.println("**********************************");
+		System.out.println("**************ETERNITY************");
+		System.out.println("**********************************");
+		System.out.println("  A Calculator to compute F5: ab^x");
+		System.out.println("***********************************");
+
+
+		double a=0,b=0;
+		int x = 0;
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("**************************");
-		System.out.println("**********ETERNITY********");
-		System.out.println("**************************");
-		System.out.println("A Calculator to calculate F5: ab^x");
 
-
-		
-		System.out.println("Enter the values of a,b and x");
-		double a = sc.nextDouble();
-		double b = sc.nextDouble();
-		int x =  sc.nextInt();
-
-		
 		try {
-			double bx = calculateExponentialResult(a,b,x);
-			System.out.println(bx);
+			System.out.println("Enter the value of a: ");
+			a = sc.nextDouble();
+
+			System.out.println("Enter the value of b: ");
+			b=sc.nextDouble();
+
+			System.out.println("Enter the value of x: ");
+			x = sc.nextInt();	
+		} catch (Exception e1) {			
+			System.err.println("Invalid datatype entered. Please enter the correct datatype again. a and b should be double and x should be integer.");
+			System.out.println("Enter the value of a: ");
+			a = sc.nextDouble();
+
+			System.out.println("Enter the value of b: ");
+			b=sc.nextDouble();
+
+			System.out.println("Enter the value of x: ");
+			x = sc.nextInt();	
+
+		}
+
+
+
+		double recursiveExponentiationResult = 0;
+		double iterativeExponentiationResult = 0;
+
+		try {
+
+			recursiveExponentiationResult = recursiveExponentiation(a,b,x);
+			iterativeExponentiationResult = iterativeExponentiation(a,b,x);
+
+			System.out.println("The computed value of exponentioal function with recursion is: " + recursiveExponentiationResult );
+			System.out.println("The computed value of exponentioal function with iteratice method is: " + iterativeExponentiationResult );
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("Incorrect Input");
@@ -94,4 +71,42 @@ class f5{
 
 
 	}
+
+
+	private static double recursiveExponentiation(double a, double b, int x) {
+		double result = 1;
+		if(x==0) {
+			return 1;
+		}
+		else {
+			try {
+				result= b * recursiveExponentiation(a,b,x-1);
+			}
+			catch(Exception StackOverflowError){
+				System.out.println("The result is very big leading to stack overflow.");
+			}
+		}
+
+		return a*result;
+
+
+	}
+
+
+	private static double iterativeExponentiation(double a, double b, int x) {
+		double result = 1;
+
+		if(x==0) {
+			return 1;
+		}
+
+
+		for(int i = 1; i <= x; i++)
+		{
+			result = result * b;
+		}
+		return a*result;
+
+	}
+
 }
