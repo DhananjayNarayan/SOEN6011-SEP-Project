@@ -1,13 +1,13 @@
 import java.util.*;
 
 /**
- * The main class f5 having main function to start the execution. Contains other
- * functions for calculations.
+ * The main class having main function to start the execution. Contains other
+ * functions for calculation of exponential function.
  * 
  * @author Dhananjay Narayan v 1.1.0
  *
  */
-class f5 {
+class f5ExponentialFunction {
 
 	/**
 	 * A function to compute exponentiation using recursion
