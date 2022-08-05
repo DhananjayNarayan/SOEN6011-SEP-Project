@@ -22,26 +22,44 @@ class f5{
 			return 1.0;
 		}
 		else {
-			 bx = calculateExponentRecursive(b,x);
-			
+			try {
+			 bx = calculateExponentIterative(b,x);
+			}
+			catch(Exception StackOverflowError){
+				System.out.println("The result is very big leading to stack overflow.");
+			}
 		}
+		
 		double result = a*bx;
 		return result;
 	}
 
 	private static double calculateExponentRecursive(double b, int x) {
 		// TODO Auto-generated method stub
+		double result = 0;
 		if(x==0) {
 			return 1;
 		}
 		else {
-			return b*calculateExponentRecursive(b,x-1);
-		}
+			try {
+			result= b*calculateExponentRecursive(b,x-1);
+			}
+			catch(Exception StackOverflowError){
+				System.out.println("The result is very big leading to stack overflow.");
+			}
+			}
+		return result;
 		
 	}
 	
-	private static double calculateExponenetIterative(double b,int x) {
-		double result = 0;
+	private static double calculateExponentIterative(double b,int x) {
+		double result = 1;
+		
+		for(int i = 1; i <= x; i++)
+		{
+			result = result * b;
+		}
+		
 		return result;
 	}
 
