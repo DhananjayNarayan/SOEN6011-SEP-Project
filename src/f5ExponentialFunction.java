@@ -4,7 +4,7 @@ import java.util.*;
  * The main class having main function to start the execution. Contains other
  * functions for calculation of exponential function.
  * 
- * @author Dhananjay Narayan v 1.1.0
+ * @author Dhananjay Narayan v 1.1.7
  *
  */
 class f5ExponentialFunction {
@@ -101,18 +101,9 @@ class f5ExponentialFunction {
 
 			System.out.println("Enter the value of x: ");
 			x = sc.nextInt();
-		} catch (Exception e1) {
+		} catch (InputMismatchException e1) {
 			System.err.println(
-					"Invalid datatype entered. Please enter the correct datatype again. a and b should be double and x should be integer.");
-
-			System.out.println("Enter the value of a: ");
-			a = sc.nextDouble();
-
-			System.out.println("Enter the value of b: ");
-			b = sc.nextDouble();
-
-			System.out.println("Enter the value of x: ");
-			x = sc.nextInt();
+					"Invalid datatype entered. Please enter the correct datatype. a and b should be double and x should be integer.");
 
 		}
 
