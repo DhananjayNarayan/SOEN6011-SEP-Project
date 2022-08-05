@@ -15,14 +15,14 @@ class f5{
 	 * @param b the power to which the base will be raised
 	 * @return res the result of the power calculation.
 	 */
-	public static double powerCalc(double b,int x) throws Exception{
+	public static double calculateExponential(double a,double b,int x) throws Exception{
 
 
 		if (x == 0) {
 			return 1;
 		}
 		else {
-			double res = b^x;
+			double res = b*x;
 			return res;
 		}
 	}
@@ -32,7 +32,7 @@ class f5{
 	 * @param args
 	 */
 	public static void main(String args[]){
-		System.out.println("In Eclipse Now: ");
+		
 		System.out.println("F5: ab^x");
 		System.out.println("In Source Now");
 
@@ -42,17 +42,15 @@ class f5{
 		double b = sc.nextDouble();
 		int x =  sc.nextInt();
 
-		double bx = 0;
+		
 		try {
-			bx = powerCalc(b,x);
+			double bx = calculateExponential(a,b,x);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("Incorrect Input");
 			e.printStackTrace();
 		}
-		double answer = a*bx;
 
-		System.out.println("Result is : "+answer );
 
 	}
 }
