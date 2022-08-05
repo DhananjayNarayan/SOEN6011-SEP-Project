@@ -18,8 +18,16 @@ class f5ExponentialFunction {
 	 * @return The result of the computation
 	 * @throws Exception
 	 */
-	private static double recursiveExponentiation(double a, double b, int x) throws Exception {
+	public static double recursiveExponentiation(double a, double b, int x) throws Exception {
 
+		if(b==1 || b<0) {
+			System.out.println("The base should not be equal to 1 or negative. If 1,it will make the function linear. If negative, the function will become logarithmic. ");
+			return 0;
+		}
+		if(a==0) {
+			System.out.println("If a is zero, the answer becomes zero. The function will no longer be exponential. ");
+			return 0;
+		}
 		double result = 1;
 		if (x == 0) {
 			return 1;
@@ -39,7 +47,18 @@ class f5ExponentialFunction {
 	 * @return The result of the computation
 	 * @throws Exception
 	 */
-	private static double iterativeExponentiation(double a, double b, int x) throws Exception {
+	public static double iterativeExponentiation(double a, double b, int x) throws Exception {
+		
+		if(b==1) {
+			System.out.println("The base should not be equal to 1 as it will make the function linear.");
+			return 0;
+		}
+		if(a==0) {
+			System.out.println("If a is zero, the answer becomes zero. The function will no longer be exponential. ");
+			return 0;
+		}
+		
+		
 		double result = 1;
 
 		if (x == 0) {
